@@ -1,9 +1,12 @@
-// import colors from 'vuetify/es5/util/colors'
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
-// import getDynamicRoutes from './utils/getDynamicRoutes.js'
-// const colors = require('vuetify/es5/util/colors')
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/investor182_admin/'
+  }
+} : {}
 
 export default {
+  ...routerBase,
   mode: 'universal',
   // generate: {
   //   async routes() {
