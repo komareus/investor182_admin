@@ -10,27 +10,27 @@ backend:
       - editor
 #  site_domain: komareus.github.io
 collections:
-#  - name: blog
-#    label: Blog
-#    folder: 'content/documents'
-#    format: json
-#    create: true
-#    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-#    fields:
-#      - label: Title
-#        name: title
-#        widget: string
-#        required: true
-#      - label: Description
-#        name: description
-#        widget: text
-#        required: true
-#      - label: Publish date
-#        name: date
-#        widget: datetime
-#      - label: Content
-#        name: body
-#        widget: markdown
+  - name: warnings
+    label: Warnings
+    folder: 'content/warnings'
+    format: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
+    fields:
+      - label: Active
+        name: active
+        widget: boolean
+        default: true
+      - label: Title
+        name: title
+        widget: string
+        required: true
+      - label: Publish date
+        name: date
+        widget: datetime
+      - label: Content
+        name: text
+        widget: markdown
   - name: news
     label: News
     folder: 'content/news'
