@@ -1,5 +1,6 @@
 media_folder: /img/uploads
 #public_folder: /img/uploads
+display_url: https://komareus.github.io
 backend:
 #  name: github
   name: git-gateway
@@ -8,6 +9,7 @@ backend:
   accept_roles: #optional - accepts all users if left out
       - admin
       - editor
+
 #  site_domain: komareus.github.io
 collections:
   - name: warnings
@@ -61,3 +63,17 @@ collections:
             allow_add: true
             fields:
               - {label: Image, name: src, widget: image}
+  - name: documents_direction_statutory
+    label: documents_direction_statutory
+    folder: 'content/documents/directions/statutory'
+    format: json
+    create: true
+    slug: '/{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}/index.json'
+    media_folder: "/content/documents/directions/statutory/{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: File
+        name: file
+        widget: file

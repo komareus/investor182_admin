@@ -17,27 +17,27 @@ export default {
   /*
    ** Headers of the page
    */
-  head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
-    ]
-  },
+  // head: {
+  //   titleTemplate: '%s - ' + process.env.npm_package_name,
+  //   title: process.env.npm_package_name || '',
+  //   meta: [
+  //     { charset: 'utf-8' },
+  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  //     {
+  //       hid: 'description',
+  //       name: 'description',
+  //       content: process.env.npm_package_description || ''
+  //     }
+  //   ],
+  //   link: [
+  //     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+  //     {
+  //       rel: 'stylesheet',
+  //       href:
+  //         'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+  //     }
+  //   ]
+  // },
   // router: {
   //   base: '/'
   // },
@@ -58,21 +58,21 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/breakpoint-fix.js', ssr: true },
-    { src: '~/plugins/filters.js', ssr: true },
+    // { src: '~/plugins/breakpoint-fix.js', ssr: true },
+    // { src: '~/plugins/filters.js', ssr: true },
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/vuetify',
+    // '@nuxtjs/vuetify',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/axios',
+    // '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/style-resources',
+    // '@nuxtjs/style-resources',
     '@nuxtjs/dotenv',
-    '@nuxtjs/markdownit'
+    // '@nuxtjs/markdownit'
   ],
   /*
    ** Axios module configuration
@@ -89,36 +89,36 @@ export default {
   //   // },
   //   // logLevel: 'debug'
   // },
-  markdownit: {
-    injected: true
-  },
+  // markdownit: {
+  //   injected: true
+  // },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
-  vuetify: {
-    theme: {
-      primary: '#323063',
-      accent: '#ffc000',
-      background: '#f0f1f3',
-      secondary: '#ff8f00',
-      secondaryDark: '#9b5700',
-      // info: colors.teal.lighten1,
-      // warning: colors.amber.base,
-      // error: colors.deepOrange.accent4,
-      // success: colors.green.accent3
-    }
-  },
-  styleResources: {
-    scss: [
-      './assets/scss/global/*.scss'
-    ]
-  },
+  // vuetify: {
+  //   theme: {
+  //     primary: '#323063',
+  //     accent: '#ffc000',
+  //     background: '#f0f1f3',
+  //     secondary: '#ff8f00',
+  //     secondaryDark: '#9b5700',
+  //     // info: colors.teal.lighten1,
+  //     // warning: colors.amber.base,
+  //     // error: colors.deepOrange.accent4,
+  //     // success: colors.green.accent3
+  //   }
+  // },
+  // styleResources: {
+  //   scss: [
+  //     './assets/scss/global/*.scss'
+  //   ]
+  // },
   /*
    ** Build configuration
    */
   build: {
-    transpile: ['vuetify/lib'],
+    // transpile: ['vuetify/lib'],
     babel: {
       presets({ isServer }) {
         return [
