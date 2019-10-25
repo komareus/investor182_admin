@@ -52,14 +52,12 @@ export default {
    ** Global CSS
    */
   css: [
-    '~/assets/style/app.styl',
+    // '~/assets/style/app.styl',
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    // { src: '~/plugins/breakpoint-fix.js', ssr: true },
-    // { src: '~/plugins/filters.js', ssr: true },
   ],
   /*
    ** Nuxt.js modules
@@ -138,7 +136,7 @@ export default {
         }
       }
     },
-    plugins: [new VuetifyLoaderPlugin()],
+    // plugins: [new VuetifyLoaderPlugin()],
     // loaders: {
     //   stylus: {
     //     import: ['~assets/style/variables.styl']
@@ -165,10 +163,10 @@ export default {
         urlLoader.test = /\.(png|jpe?g|gif)$/
       }
       // Setup SVG loader
-      config.module.rules.push({
-        test: /\.svg$/,
-        loader: 'svg-inline-loader'
-      });
+      // config.module.rules.push({
+      //   test: /\.svg$/,
+      //   loader: 'svg-inline-loader'
+      // });
     }
   }
 }
