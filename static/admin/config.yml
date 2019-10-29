@@ -4,6 +4,7 @@ media_library:
   config:
     cloud_name: investor182
     api_key: 525457938989435
+    api_secret: mI3kOhd9tUJcFavZ45wPbxgmV7E
 #media_folder: /img/uploads
 #media_folder_relative: false
 #public_folder: /img/uploads
