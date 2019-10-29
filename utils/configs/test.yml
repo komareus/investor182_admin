@@ -1,0 +1,6 @@
+collections:
+  - name: file_test
+    label: file_test
+    folder: 'content/test'
+    format: json
+    create: true

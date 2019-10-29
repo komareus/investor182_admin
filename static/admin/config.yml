@@ -1,4 +1,11 @@
-media_folder: /img/uploads
+media_library:
+  name: cloudinary
+#  output_filename_only: true
+  config:
+    cloud_name: investor182
+    api_key: 525457938989435
+#media_folder: /img/uploads
+#media_folder_relative: false
 #public_folder: /img/uploads
 display_url: https://komareus.github.io
 backend:
@@ -62,18 +69,47 @@ collections:
             widget: list
             allow_add: true
             fields:
-              - {label: Image, name: src, widget: image}
-  - name: documents_direction_statutory
-    label: documents_direction_statutory
-    folder: 'content/documents/directions/statutory'
+              - label: Image
+                name: src
+                widget: image
+                media_library:
+                  config:
+                    default_transformations:
+                      - width: 600
+                        quality: auto
+                        crop: fit
+  - name: documents
+    label: Documents
+    folder: 'content/documents/'
     format: json
     create: true
-    slug: '/{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}/index.json'
-    media_folder: "/content/documents/directions/statutory/{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
+      - label: Chapter
+        name: chapter
+        widget: select
+        options: ["left", "center", "right"]
       - label: Title
         name: title
         widget: string
       - label: File
         name: file
         widget: file
+
+#  - name: test
+#    label:  TEST
+#    files:
+#      - label: "About Page"
+#        name: "about"
+#        file: "/content/test.json"
+#        fields:
+#          - {label: Title, name: title, widget: string}
+#          - {label: Intro, name: intro, widget: markdown}
+#          - label: Team
+#            name: team
+#            widget: list
+#            fields:
+#              - {label: Name, name: name, widget: string}
+#              - {label: Position, name: position, widget: string}
+#              - {label: Photo, name: photo, widget: image}
+
