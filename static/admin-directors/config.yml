@@ -1,0 +1,61 @@
+media_library:
+  name: cloudinary
+#  output_filename_only: true
+  config:
+    cloud_name: investor182
+    api_key: 525457938989435
+#media_folder: /img/uploads
+#media_folder_relative: false
+#public_folder: /img/uploads
+display_url: https://komareus.github.io
+backend:
+#  name: github
+  name: git-gateway
+#  repo: komareus/komareus.github.io
+  branch: master
+  accept_roles: #optional - accepts all users if left out
+      - admin
+      - directors
+
+#  site_domain: komareus.github.io
+collections:
+  - name: documentsStatutory
+    label: Statutory
+    folder: 'content/documents/statutory'
+    format: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: File
+        name: file
+        widget: file
+      - label: Image
+        name: src
+        widget: image
+        media_library:
+          config:
+            default_transformations:
+              - width: 600
+                quality: auto
+                crop: fit
+
+#  - name: test
+#    label:  TEST
+#    files:
+#      - label: "About Page"
+#        name: "about"
+#        file: "/content/test.json"
+#        fields:
+#          - {label: Title, name: title, widget: string}
+#          - {label: Intro, name: intro, widget: markdown}
+#          - label: Team
+#            name: team
+#            widget: list
+#            fields:
+#              - {label: Name, name: name, widget: string}
+#              - {label: Position, name: position, widget: string}
+#              - {label: Photo, name: photo, widget: image}
+
