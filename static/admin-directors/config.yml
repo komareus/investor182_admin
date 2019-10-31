@@ -1,27 +1,20 @@
 media_library:
   name: cloudinary
-#  output_filename_only: true
   config:
     cloud_name: investor182
     api_key: 525457938989435
-#media_folder: /img/uploads
-#media_folder_relative: false
-#public_folder: /img/uploads
 display_url: https://komareus.github.io
 backend:
-#  name: github
   name: git-gateway
-#  repo: komareus/komareus.github.io
   branch: master
   accept_roles: #optional - accepts all users if left out
       - admin
       - directors
-
 #  site_domain: komareus.github.io
 collections:
   - name: documentsStatutory
     label: Statutory
-    folder: 'content/documents/statutory'
+    folder: 'content/documents/directors/statutory'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -29,33 +22,178 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: Publish date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+        required: false
       - label: File
         name: file
         widget: file
-      - label: Image
-        name: src
-        widget: image
-        media_library:
-          config:
-            default_transformations:
-              - width: 600
-                quality: auto
-                crop: fit
-
-#  - name: test
-#    label:  TEST
-#    files:
-#      - label: "About Page"
-#        name: "about"
-#        file: "/content/test.json"
-#        fields:
-#          - {label: Title, name: title, widget: string}
-#          - {label: Intro, name: intro, widget: markdown}
-#          - label: Team
-#            name: team
-#            widget: list
-#            fields:
-#              - {label: Name, name: name, widget: string}
-#              - {label: Position, name: position, widget: string}
-#              - {label: Photo, name: photo, widget: image}
-
+        required: false
+      - label: Images
+        name: img
+        widget: list
+        allow_add: true
+        required: false
+        fields:
+          - label: Image
+            name: src
+            widget: image
+            required: false
+            media_library:
+              config:
+                default_transformations:
+                  - width: 600
+                    quality: auto
+                    crop: fit
+  - name: documentsAgreements
+    label: Agreements
+    folder: 'content/documents/directors/agreements'
+    format: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+        required: false
+      - label: File
+        name: file
+        widget: file
+        required: false
+      - label: Images
+        name: img
+        widget: list
+        allow_add: true
+        required: false
+        fields:
+          - label: Image
+            name: src
+            widget: image
+            required: false
+            media_library:
+              config:
+                default_transformations:
+                  - width: 600
+                    quality: auto
+                    crop: fit
+  - name: documentsMail
+    label: Mail
+    folder: 'content/documents/directors/mail'
+    format: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+        required: false
+      - label: File
+        name: file
+        widget: file
+        required: false
+      - label: Images
+        name: img
+        widget: list
+        allow_add: true
+        required: false
+        fields:
+          - label: Image
+            name: src
+            widget: image
+            required: false
+            media_library:
+              config:
+                default_transformations:
+                  - width: 600
+                    quality: auto
+                    crop: fit
+  - name: documentsProtocols
+    label: Protocols
+    folder: 'content/documents/directors/protocols'
+    format: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+        required: false
+      - label: File
+        name: file
+        widget: file
+        required: false
+      - label: Images
+        name: img
+        widget: list
+        allow_add: true
+        required: false
+        fields:
+          - label: Image
+            name: src
+            widget: image
+            required: false
+            media_library:
+              config:
+                default_transformations:
+                  - width: 600
+                    quality: auto
+                    crop: fit
+  - name: documentsOther
+    label: Other
+    folder: 'content/documents/directors/other'
+    format: json
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+        required: false
+      - label: File
+        name: file
+        widget: file
+        required: false
+      - label: Images
+        name: img
+        widget: list
+        allow_add: true
+        required: false
+        fields:
+          - label: Image
+            name: src
+            widget: image
+            required: false
+            media_library:
+              config:
+                default_transformations:
+                  - width: 600
+                    quality: auto
+                    crop: fit
