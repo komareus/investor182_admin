@@ -8,7 +8,7 @@ media_library:
 #media_folder: /img/uploads
 #media_folder_relative: false
 #public_folder: /img/uploads
-display_url: https://komareus.github.io
+display_url: https://cloudinary.com/users/login
 backend:
 #  name: github
   name: git-gateway
@@ -23,56 +23,56 @@ backend:
 #  site_domain: komareus.github.io
 collections:
   - name: warnings
-    label: Warnings
+    label: 'ОГОЛОШЕННЯ'
     folder: 'content/warnings'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Active
+      - label: 'Активувати оголошення'
         name: active
         widget: boolean
         default: true
-      - label: Title
+      - label: 'Назва оголошення'
         name: title
         widget: string
         required: true
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Content
+      - label: 'Текст оголошення'
         name: text
         widget: markdown
   - name: news
-    label: News
+    label: 'НОВИНИ'
     folder: 'content/news'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва новини'
         name: title
         widget: string
         required: true
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Short text
+      - label: 'Короткий опис новини'
         name: short
         widget: text
         required: true
-      - label: Content
+      - label: 'Текст новини'
         name: body
         widget: list
         allow_add: true
         fields:
-          - {label: Paragraph, name: body, widget: markdown}
-          - label: Images
+          - {label: 'Новий розділ новини', name: body, widget: markdown}
+          - label: 'Додати зображення'
             name: img
             widget: list
             allow_add: true
             fields:
-              - label: Image
+              - label: 'Зображення'
                 name: src
                 widget: image
                 media_library:
@@ -82,18 +82,46 @@ collections:
                         quality: auto
                         crop: fit
   - name: documents
-    label: Documents
-    folder: 'content/documents/'
+    label: 'ДОКУМЕНТИ (різні)'
+    folder: 'content/documents/other'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва документа'
         name: title
         widget: string
-      - label: File
+      - label: 'Дата публікування'
+        name: date
+        widget: datetime
+      - label: 'Короткий опис'
+        name: description
+        widget: text
+        required: false
+      - label: 'Завантажити файл документа'
         name: file
         widget: file
+        required: false
+      - label: 'Додати посилання на документ'
+        name: link
+        widget: string
+        required: false
+      - label: 'Завантажити фото/скани документа'
+        name: img
+        widget: list
+        allow_add: true
+        required: false
+        fields:
+          - label: 'Завантажити зображення'
+            name: src
+            widget: image
+            required: false
+            media_library:
+              config:
+                default_transformations:
+                  - width: 600
+                    quality: auto
+                    crop: fit
 
 #  - name: test
 #    label:  TEST

@@ -1,9 +1,9 @@
 media_library:
   name: cloudinary
   config:
-    cloud_name: investor182
-    api_key: 525457938989435
-display_url: https://komareus.github.io
+    cloud_name: directors182
+    api_key: 199374639964265
+display_url: https://cloudinary.com/users/login
 backend:
   name: git-gateway
   branch: master
@@ -13,33 +13,33 @@ backend:
 #  site_domain: komareus.github.io
 collections:
   - name: documentsStatutory
-    label: Statutory
+    label: 'Документи статутні'
     folder: 'content/documents/directors/statutory'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва документа'
         name: title
         widget: string
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Description
+      - label: 'Короткий опис'
         name: description
         widget: text
         required: false
-      - label: File
+      - label: 'Завантажити файл документа'
         name: file
         widget: file
         required: false
-      - label: Images
+      - label: 'Завантажити фото/скани документа'
         name: img
         widget: list
         allow_add: true
         required: false
         fields:
-          - label: Image
+          - label: 'Завантажити зображення'
             name: src
             widget: image
             required: false
@@ -50,33 +50,33 @@ collections:
                     quality: auto
                     crop: fit
   - name: documentsAgreements
-    label: Agreements
+    label: 'Договори'
     folder: 'content/documents/directors/agreements'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва документа'
         name: title
         widget: string
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Description
+      - label: 'Короткий опис'
         name: description
         widget: text
         required: false
-      - label: File
+      - label: 'Завантажити файл документа'
         name: file
         widget: file
         required: false
-      - label: Images
+      - label: 'Завантажити фото/скани документа'
         name: img
         widget: list
         allow_add: true
         required: false
         fields:
-          - label: Image
+          - label: 'Завантажити зображення'
             name: src
             widget: image
             required: false
@@ -87,33 +87,37 @@ collections:
                     quality: auto
                     crop: fit
   - name: documentsMail
-    label: Mail
+    label: 'Листування'
     folder: 'content/documents/directors/mail'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва документа'
         name: title
         widget: string
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Description
+      - label: 'Короткий опис'
         name: description
         widget: text
         required: false
-      - label: File
+      - label: 'Завантажити файл документа'
         name: file
         widget: file
         required: false
-      - label: Images
+      - label: 'Додати посилання на документ'
+        name: link
+        widget: string
+        required: false
+      - label: 'Завантажити фото/скани документа'
         name: img
         widget: list
         allow_add: true
         required: false
         fields:
-          - label: Image
+          - label: 'Завантажити зображення'
             name: src
             widget: image
             required: false
@@ -124,33 +128,37 @@ collections:
                     quality: auto
                     crop: fit
   - name: documentsProtocols
-    label: Protocols
+    label: 'Протоколи'
     folder: 'content/documents/directors/protocols'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва документа'
         name: title
         widget: string
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Description
+      - label: 'Короткий опис'
         name: description
         widget: text
         required: false
-      - label: File
+      - label: 'Завантажити файл документа'
         name: file
         widget: file
         required: false
-      - label: Images
+      - label: 'Додати посилання на документ'
+        name: link
+        widget: string
+        required: false
+      - label: 'Завантажити фото/скани документа'
         name: img
         widget: list
         allow_add: true
         required: false
         fields:
-          - label: Image
+          - label: 'Завантажити зображення'
             name: src
             widget: image
             required: false
@@ -161,33 +169,37 @@ collections:
                     quality: auto
                     crop: fit
   - name: documentsOther
-    label: Other
+    label: 'Документи різні'
     folder: 'content/documents/directors/other'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
     fields:
-      - label: Title
+      - label: 'Назва документа'
         name: title
         widget: string
-      - label: Publish date
+      - label: 'Дата публікування'
         name: date
         widget: datetime
-      - label: Description
+      - label: 'Короткий опис'
         name: description
         widget: text
         required: false
-      - label: File
+      - label: 'Завантажити файл документа'
         name: file
         widget: file
         required: false
-      - label: Images
+      - label: 'Додати посилання на документ'
+        name: link
+        widget: string
+        required: false
+      - label: 'Завантажити фото/скани документа'
         name: img
         widget: list
         allow_add: true
         required: false
         fields:
-          - label: Image
+          - label: 'Завантажити зображення'
             name: src
             widget: image
             required: false
