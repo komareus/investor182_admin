@@ -21,7 +21,7 @@ backend:
 collections:
   - name: documentsStatutory
     label: 'Звіти'
-    folder: 'content/documents/revision/reports'
+    folder: 'content/documents/revision-reports'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -62,7 +62,7 @@ collections:
                     crop: fit
   - name: documentsMail
     label: 'Протоколи'
-    folder: 'content/documents/revision/protocols'
+    folder: 'content/documents/revision-protocols'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -103,7 +103,7 @@ collections:
                     crop: fit
   - name: documentsOther
     label: 'Документи різні'
-    folder: 'content/documents/revision/other'
+    folder: 'content/documents/revision-other'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'

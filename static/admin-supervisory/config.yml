@@ -21,7 +21,7 @@ backend:
 collections:
   - name: documentsStatutory
     label: 'Протоколи'
-    folder: 'content/documents/supervisory/protocols'
+    folder: 'content/documents/supervisory-protocols'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -62,7 +62,7 @@ collections:
                     crop: fit
   - name: documentsMail
     label: 'Інформаційні листи'
-    folder: 'content/documents/supervisory/letters'
+    folder: 'content/documents/supervisory-letters'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -103,7 +103,7 @@ collections:
                     crop: fit
   - name: documentsOther
     label: 'Документи різні'
-    folder: 'content/documents/supervisory/other'
+    folder: 'content/documents/supervisory-other'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'

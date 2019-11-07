@@ -14,7 +14,7 @@ backend:
 collections:
   - name: documentsStatutory
     label: 'Документи статутні'
-    folder: 'content/documents/directors/statutory'
+    folder: 'content/documents/directors-statutory'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -51,7 +51,7 @@ collections:
                     crop: fit
   - name: documentsAgreements
     label: 'Договори'
-    folder: 'content/documents/directors/agreements'
+    folder: 'content/documents/directors-agreements'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -88,7 +88,7 @@ collections:
                     crop: fit
   - name: documentsMail
     label: 'Листування'
-    folder: 'content/documents/directors/mail'
+    folder: 'content/documents/directors-letters'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -129,7 +129,7 @@ collections:
                     crop: fit
   - name: documentsProtocols
     label: 'Протоколи'
-    folder: 'content/documents/directors/protocols'
+    folder: 'content/documents/directors-protocols'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
@@ -170,7 +170,7 @@ collections:
                     crop: fit
   - name: documentsOther
     label: 'Документи різні'
-    folder: 'content/documents/directors/other'
+    folder: 'content/documents/directors-other'
     format: json
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}'
