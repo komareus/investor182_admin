@@ -1,6 +1,6 @@
 /* stylelint-disable */
-/* Base typography */
-/*html, body, div, span, applet, object, iframe,
+ Base typography
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -14,40 +14,86 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video, input {
   font-family: 'Opensans';
-}*/
-
-#app-container {
-  font-family: 'Opensans';
 }
 
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
+
+html{
+  background-color: $c--general-background;
+}
 
 button{
   outline: none;
 }
-//.v-btn {
-//  border-radius: 4px;
-//  height: 40px;
-//}
 
-.container {
-  //max-width: 1185px;
-  max-width: 1320px;
+#main-container {
+  margin: 0 auto;
 }
 
-// @media only screen and (min-width: 960px) {
-//   .container {
-//       max-width: 930px;
-//       padding: 30px 20px;
-//   }
-// }
-
-// @media only screen and (min-width: 1264px) {
-//   .container {
-//       max-width: 1185px;
-//   }
-// }
+@media only screen and (min-width: 320px) {
+  #main-container {
+    max-width: 300px;
+    padding: 10px 10px;
+  }
+  h1{
+    font-size: 1.1rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 360px) {
+  #main-container {
+    max-width: 340px;
+    padding: 10px 15px;
+  }
+  h1{
+    font-size: 1.3rem;
+  }
+  h2{
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #main-container {
+    max-width: 540px;
+    padding: 25px 20px;
+  }
+  h1{
+    font-size: 1.6rem;
+  }
+  h2{
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #main-container {
+     max-width: 930px;
+     padding: 30px 20px;
+ }
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1264px) {
+  #main-container {
+    max-width: 1100px;
+    padding: 50px 40px;
+ }
+  h1{
+    font-size: 2.2rem;
+  }
+  h2{
+    font-size: 1.8rem;
+  }
+}
 
 

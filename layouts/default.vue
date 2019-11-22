@@ -1,6 +1,7 @@
 <template>
-  <div></div>
-  <!--<nuxt />-->
+  <div class="default-layout" id="main-container">
+    <nuxt />
+  </div>
 </template>
 
 <script>
@@ -10,6 +11,5 @@ export default {
 
 <style lang="scss">
   .default-layout{
-
   }
 </style>

@@ -1,4 +1,4 @@
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
+// import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/investor182_admin/'
@@ -17,27 +17,27 @@ export default {
   /*
    ** Headers of the page
    */
-  // head: {
-  //   titleTemplate: '%s - ' + process.env.npm_package_name,
-  //   title: process.env.npm_package_name || '',
-  //   meta: [
-  //     { charset: 'utf-8' },
-  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-  //     {
-  //       hid: 'description',
-  //       name: 'description',
-  //       content: process.env.npm_package_description || ''
-  //     }
-  //   ],
-  //   link: [
-  //     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-  //     {
-  //       rel: 'stylesheet',
-  //       href:
-  //         'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-  //     }
-  //   ]
-  // },
+  head: {
+    titleTemplate: '%s - ' + 'ADMIN investor182',
+    title: 'ADMIN investor182',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Admin chapter'
+      }
+    ],
+    // link: [
+    //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    //   {
+    //     rel: 'stylesheet',
+    //     href:
+    //       'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+    //   }
+    // ]
+  },
   // router: {
   //   base: '/'
   // },
@@ -63,12 +63,13 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    ['cookie-universal-nuxt'],
     // '@nuxtjs/vuetify',
     // Doc: https://axios.nuxtjs.org/usage
     // '@nuxtjs/axios',
     // '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
-    // '@nuxtjs/style-resources',
+    '@nuxtjs/style-resources',
     '@nuxtjs/dotenv',
     // '@nuxtjs/markdownit'
   ],
@@ -107,11 +108,11 @@ export default {
   //     // success: colors.green.accent3
   //   }
   // },
-  // styleResources: {
-  //   scss: [
-  //     './assets/scss/global/*.scss'
-  //   ]
-  // },
+  styleResources: {
+    scss: [
+      './assets/scss/global/*.scss'
+    ]
+  },
   /*
    ** Build configuration
    */
