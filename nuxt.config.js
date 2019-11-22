@@ -1,12 +1,12 @@
 // import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/investor182_admin/'
-  }
-} : {}
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/investor182_admin/'
+//   }
+// } : {}
 
 export default {
-  ...routerBase,
+  // ...routerBase,
   mode: 'spa',
   // generate: {
   //   async routes() {
