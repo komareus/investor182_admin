@@ -102,7 +102,8 @@ import AButton from '~/components/shared/AButton'
 //   // require('https://identity.netlify.com/v1/netlify-identity-widget.js')
 //   // require('https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js')
 // }
-import netlifyIdentity from 'netlify-identity-widget'
+const netlifyIdentity = require('netlify-identity-widget')
+// import netlifyIdentity from 'netlify-identity-widget'
 export default {
   name: 'Home',
   components: { AButton },
