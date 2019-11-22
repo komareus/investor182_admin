@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <div class="main-container">
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
@@ -7,9 +7,9 @@
       {{ otherError }}
     </h1>
     <NuxtLink to="/">
-      Home page
+      Повернутись на головну сторінку
     </NuxtLink>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      otherError: 'УПС... ПОМИЛКА!!!'
     }
   }
 }

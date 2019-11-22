@@ -96,13 +96,13 @@
 
 <script>
 import AButton from '~/components/shared/AButton'
-let netlifyIdentity
-if (process.browser) {
-  netlifyIdentity = require('netlify-identity-widget')
-  // require('https://identity.netlify.com/v1/netlify-identity-widget.js')
-  // require('https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js')
-}
-// import netlifyIdentity from 'netlify-identity-widget'
+// let netlifyIdentity
+// if (process.browser) {
+//   netlifyIdentity = require('netlify-identity-widget')
+//   // require('https://identity.netlify.com/v1/netlify-identity-widget.js')
+//   // require('https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js')
+// }
+import netlifyIdentity from 'netlify-identity-widget'
 export default {
   name: 'Home',
   components: { AButton },
@@ -131,18 +131,23 @@ export default {
     }
   },
   created() {
-    if (process.browser) {
-      this.getLocalstorrageUser()
-      this.initNetlify();
-    }
+    // if (process.browser) {
+    //   // this.getLocalstorrageUser()
+    //   // this.initNetlify();
+    // }
   },
   mounted() {
-    if (process.browser) {
-      this.getLocalstorrageUser();
-      this.$nextTick(() => {
-        this.showUserInfo = true
-      })
-    }
+    this.initNetlify();
+    this.getLocalstorrageUser();
+    this.$nextTick(() => {
+      this.showUserInfo = true
+    })
+    // if (process.browser) {
+    //   //
+    //   this.$nextTick(() => {
+    //     this.showUserInfo = true
+    //   })
+    // }
   },
   methods: {
     initNetlify() {
