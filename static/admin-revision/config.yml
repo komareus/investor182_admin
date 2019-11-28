@@ -15,7 +15,6 @@ backend:
   branch: master
   accept_roles: #optional - accepts all users if left out
     - revision
-    - admin
 
 #  site_domain: komareus.github.io
 collections:
