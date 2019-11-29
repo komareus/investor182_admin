@@ -15,10 +15,10 @@ backend:
 #  repo: komareus/komareus.github.io
   branch: master
   accept_roles: #optional - accepts all users if left out
-      - admin
-      - directors
-      - revision
-      - supervisory
+    - admin
+    - directors
+    - revision
+    - supervisory
 
 #  site_domain: komareus.github.io
 collections:
